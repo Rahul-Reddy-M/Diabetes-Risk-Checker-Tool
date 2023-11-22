@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Diabetes Risk Checker Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        h2 {
+            color: #4CAF50;
+        }
+        p {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #4CAF50;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Diabetes Risk Checker Result</h1>
+        
+        
+            <h2>Risk Score:</h2>
+            <p>{{ risk_score }}</p>
+            
+            <h2>Health Tips:</h2>
+            <p>{{ health_tips }}</p>
+            
+            <h2>Model Accuracy:</h2>
+            <p>{{ accuracy * 100 }}%</p>
+            <a href="/">Back to Check Again</a>
+        
+        
+    </div>
+</body>
+</html>

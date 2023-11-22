@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Diabetes Risk Checker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+        button[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Diabetes Risk Checker</h1>
+        <form method="POST" action="/">
+            <label for="age">Age:</label>
+            <input type="number" name="age" required>
+
+            <label for="pregnancies">Number of Pregnancies:</label>
+            <input type="number" name="pregnancies" required>
+
+            <label for="glucose">Glucose Level:</label>
+            <input type="number" name="glucose" required>
+
+            <label for="blood_pressure">Blood Pressure:</label>
+            <input type="number" name="blood_pressure" required>
+
+            <label for="skin_thickness">Skin Thickness:</label>
+            <input type="number" name="skin_thickness" required>
+
+            <label for="insulin">Insulin Level:</label>
+            <input type="number" name="insulin" required>
+
+            <label for="bmi">BMI:</label>
+            <input type="number" name="bmi" required>
+
+            <label for="diabetes_pedigree">Diabetes Pedigree:</label>
+            <input type="number" name="diabetes_pedigree" required>
+
+            <button type="submit">Check Risk</button>
+        </form>
+        
+            <div class="error">
+                <ul>
+                  
+                        <li>{{ field }}: {{ error }}</li>
+       
+                </ul>
+            </div>
+       
+    </div>
+</body>
+</html>
